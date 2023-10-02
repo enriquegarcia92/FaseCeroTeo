@@ -68,8 +68,8 @@ def analyzeToken(token_string, line_number):
 def analyzeSourceCode(source_code):
     symbol_table = SymbolTable()
 
-    # Eliminar comentarios del código fuente
-    source_code = re.sub(r'//.?\n|/\.?\/', '', source_code, flags=re.DOTALL)
+    # Eliminar comentarios del código fuente (tanto de línea como de bloque)
+    source_code = re.sub(r'//.*?|/\*.*?\*/', '', source_code, flags=re.DOTALL)
 
     # Tokenize the source code
     tokens = re.findall(r'\".*?\"|\w+|[^\w\s]', source_code)
