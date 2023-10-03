@@ -36,7 +36,7 @@ def isReservedWord(word):
     return word in reserved_words
 
 
-# Función que analiza el token
+# Función para analizar el token
 def analyzeToken(token_string, line_number):
     if token_string.isdigit():
         return Token("Constante", token_string)
@@ -59,22 +59,21 @@ def analyzeToken(token_string, line_number):
     elif token_string == ':':
         return Token("Dos puntos", token_string)
     else:
-        print(f"Error en la línea {line_number}: Token no válido: {token_string}")
+        print("Error en la línea: {line_number} Token no válido: {token_string}")
         return None
-
 
 
 # Función para analizar el código fuente
 def analyzeSourceCode(source_code):
     symbol_table = SymbolTable()
 
-    # Eliminar comentarios del código fuente (tanto de línea como de bloque)
+    # Eliminación de comentarios del código fuente (tanto de línea como de bloque)
     source_code = re.sub(r'//.*?|/\*.*?\*/', '', source_code, flags=re.DOTALL)
 
-    # Tokenize the source code
+    # Tokenización del código fuente
     tokens = re.findall(r'\".*?\"|\w+|[^\w\s]', source_code)
 
-    # Iterate over the tokens and add them to the symbol table
+    # Iteración y agregación de los tokens a la tabla de símbolos
     line_number = 1
     for token_string in tokens:
         analyzed_token = analyzeToken(token_string, line_number)
