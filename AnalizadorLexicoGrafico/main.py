@@ -28,7 +28,7 @@ class SymbolTable:
 # Función para verificar si una cadena es una palabra reservada
 def isReservedWord(word):
     reserved_words = ['abstract', 'switch', 'break', 'case', 'char',
-                      'class', 'return', 'default', 'do', 'double',
+                      'class', 'return', 'default', 'implements', 'double',
                       'else', 'extends', 'for', 'if', 'int']
     return word in reserved_words
 
