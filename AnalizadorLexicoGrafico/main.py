@@ -56,7 +56,7 @@ def analyzeToken(token_string, line_number):
     elif token_string == ':':
         return Token("Dos puntos", token_string)
     else:
-        print("Error en la línea: {line_number} Token no válido: {token_string}")
+        print(f"Error en la línea: {line_number} Token no válido: {token_string}")
         return None
 
 
