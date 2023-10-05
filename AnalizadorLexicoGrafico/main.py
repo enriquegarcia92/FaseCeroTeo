@@ -15,6 +15,8 @@ def main():
         print("\nTabla de símbolos:")
         symbol_table.print()
 
+    input("Press Enter to exit...")
+
 
 if __name__ == '__main__':
     main()
