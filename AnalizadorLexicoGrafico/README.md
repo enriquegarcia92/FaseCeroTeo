@@ -1,10 +1,15 @@
 ﻿# Integrantes:
 
 García Arévalo, José Enrique 00093619
+
 Hernández García, Rodrigo Anibal 00050519
+
 López Henríquez, Guillermo Daniel 00026018
+
 Cruz Cader, Miguel Alejandro 00019018
+
 Escobar Hernandez, Luis Gustavo 00091318
+
 Alejandro Enrique Rivera  Vasquez 00011218
 
 Este documento presenta el desarrollo de un software tokenizador implementado en Python como parte de un proyecto de la materia de teoría de lenguajes de programación. El objetivo principal del software es realizar un análisis léxico preciso en programas escritos en Python, identificando y clasificando elementos léxicos como identificadores, palabras reservadas, operadores y constantes durante el proceso de compilación.
